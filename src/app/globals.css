@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-bg: #F39221;
+  --text-color: white;
+  --hover-color: #FFA500; /* Ejemplo de color para el hover */
+}
+
+nav {
+  background-color: var(--primary-bg);
+}
+
+nav a {
+  color: var(--text-color);
+}
+
+nav a:hover {
+  color: var(--hover-color);
+}
+
+
