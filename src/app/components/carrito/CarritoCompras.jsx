@@ -101,7 +101,7 @@ export default function CarritoPage({ carrito }) {
                 ${productosCarrito.reduce((total, producto) => total + (calcularPrecioConDescuento(producto) * producto.quantity), 0).toLocaleString('es-AR', { minimumFractionDigits: 2 })}
               </span>
             </div>
-            <button className="w-full bg-emerald-500 hover:bg-emerald-600 text-white p-2">
+            <button id="iniciar-pago" className="w-full bg-emerald-500 hover:bg-emerald-600 text-white p-2">
               INICIAR PAGO
             </button>
           </div>
