@@ -60,12 +60,17 @@ export default function VeterinariosPage() {
     <div className="px-6 py-8">
       <h1 className="text-4xl font-bold mb-4">Veterinarios</h1>
       <h2 className="text-2xl font-semibold text-gray-600 mb-8">Profesionales disponibles</h2>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+  
+      {}
+      <div 
+        id="veterinarios-contenedor" // ID para identificar el contenedor de veterinarios
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+      >
         {veterinarios.map(vet => (
           <VetCard key={vet.id} vet={vet} />
         ))}
       </div>
     </div>
   );
+  
 }

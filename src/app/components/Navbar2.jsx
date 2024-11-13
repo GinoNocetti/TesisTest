@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { Search, ShoppingCart, Menu, X } from 'lucide-react';
+import Link from 'next/link';
 
 const Navbar = ({ isAdmin }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,12 +35,12 @@ const Navbar = ({ isAdmin }) => {
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#F39221]" />
           </div>
           <div className="flex items-center space-x-4">
-            <div className="hidden md:block">
-              <a href="/login" className="hover:underline">Log in</a>
+          <div className="hidden md:block">
+            <Link href="/login" className="hover:underline">Log in</Link>
               {' | '}
-              <a href="/register" className="hover:underline">Registrarse</a>
-            </div>
-            <a href="/cart">
+            <Link href="/register" className="hover:underline">Registrarse</Link>
+          </div>
+            <a href="/carrito">
               <ShoppingCart className="h-6 w-6" />
             </a>
           </div>
@@ -107,19 +108,14 @@ const Navbar = ({ isAdmin }) => {
               </div>
             </div>
             <div className="mt-3 px-2 space-y-1">
-              <a
-                href="/login"
-                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-orange-600"
-              >
-                Log in
-              </a>
-              <a
-                href="/register"
-                className="block px-3 py-2 rounded-md text-base font-medium hover:bg-orange-600"
-              >
-                Registrarse
-              </a>
-            </div>
+  <Link href="/login" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-orange-600">
+    Log in
+  </Link>
+  <Link href="/register" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-orange-600">
+    Registrarse
+  </Link>
+</div>
+
           </div>
         </div>
       )}
